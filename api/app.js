@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var testAPIRouter = require("./routes/testAPI");//Creo el router que voy a probar.
-//var itemsPublicationRouter = require("./routes/itemsPublications")
+var testAPIRouter = require("./routes/testAPI");
+var ticketsRouter = require("./routes/tickets");
+
 var app = express();
 
 // view engine setup
@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Debajo de esta linea es donde debo pegar las nuevas direcciones X que haga en /routes . Ej.: /routes/X.js
-app.use('/', indexRouter);
 app.use("/testAPI", testAPIRouter);
+app.use("/tickets", ticketsRouter);
 //---------------------------------------------------------
 
 // catch 404 and forward to error handler
