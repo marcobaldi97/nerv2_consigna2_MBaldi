@@ -3,11 +3,8 @@ import React from 'react';
 import './App.css';
 
 //my stuff ↓↓↓
-import AddUser from "./users/AddUser"
-import Login from "./users/Login"
-import Topnavbar from "./top-navbar/Topnavbar";
-import SingleitemViewer from "./products/SingleItemViewer";
-import ItemPage from "./products/ItemPage";
+import TicketSingleViewer from "./tickets/TicketSingleViewer"
+import TicketsViewer from "./tickets/TicketsViewer"
 //my stuff ↑↑↑
 
 class App extends React.Component {
@@ -15,11 +12,10 @@ class App extends React.Component {
     super(props);
     this.state = { 
     };//this.state
-    this.handlePage = this.handlePage.bind(this);
   }; 
 
   render(){
-    return(<a>Hi!</a>);
+    return(<TicketsViewer></TicketsViewer>);
   };
 }
 export default App;
