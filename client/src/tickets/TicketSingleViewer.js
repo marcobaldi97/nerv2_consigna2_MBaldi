@@ -24,10 +24,10 @@ class TicketSingleViewer extends React.Component {
                 </Row>
                 <Row>
                     <Col>
-                        <Button className={this.props.status} variant="primary" size="sm">{this.props.status}</Button>
+                        <div className={this.props.status} size="sm">{this.props.status}</div>
                     </Col>
                     <Col> 
-                        <p><strong>{this.props.subject}</strong></p>
+                        <p align="left"><strong>{this.props.subject}</strong></p>
                     </Col> 
                 </Row>
                 <Row>
